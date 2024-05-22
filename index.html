@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tapnowater's Typing Test</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="icon-192x192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="icon-192x192.png" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tapnowater's Typing Test</h1>
+      <div id="sentence-container">
+        <p id="sentence">Click 'Start' to begin the test</p>
+      </div>
+      <textarea id="input-box" placeholder="Type here..." disabled></textarea>
+      <button id="start-button">Start</button>
+      <div id="results">
+        <p id="wpm">WPM:</p>
+        <p id="accuracy">Accuracy:</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/service-worker.js").then(
+            function (registration) {
+              console.log(
+                "Service Worker registered with scope:",
+                registration.scope
+              );
+            },
+            function (error) {
+              console.log("Service Worker registration failed:", error);
+            }
+          );
+        });
+      }
+    </script>
+  </body>
+</html>

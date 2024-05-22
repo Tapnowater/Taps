@@ -1,0 +1,22 @@
+{
+    "name": "Tapnowater's Typing Test",
+    "short_name": "TypingTest",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "description": "A simple typing test game to measure your typing speed and accuracy.",
+    "icons": [
+      {
+        "src": "android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
